@@ -1,25 +1,75 @@
 <head>
   <title>android</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
 </head>
 
 <body>
-  <h1>Welcome to Meteor!</h1>
-
-  {{> hello}}
-  {{> info}}
+  {{> applicationLayout}}
 </body>
 
-<template name="hello">
-  <button>Click Me</button>
-  <p>You've pressed the button {{counter}} times.</p>
+<template name="applicationLayout">
+  {{> Template.dynamic template=main}}
 </template>
 
-<template name="info">
-  <h2>Learn Meteor!</h2>
-  <ul>
-    <li><a href="https://www.meteor.com/try" target="_blank">Do the Tutorial</a></li>
-    <li><a href="http://guide.meteor.com" target="_blank">Follow the Guide</a></li>
-    <li><a href="https://docs.meteor.com" target="_blank">Read the Docs</a></li>
-    <li><a href="https://forums.meteor.com" target="_blank">Discussions</a></li>
-  </ul>
+<template name="main">
+  <div data-page="tabs-static" class="page view view-main tabs-static toolbar-fixed">
+    <div class="toolbar tabbar">
+      <div class="toolbar-inner"><a href="#tab1" class="active tab-link">Istoric vizite</a><a href="#tab2" class="tab-link">Alerte</a></div>
+    </div>
+    <div class="tabs-animated-wrap">
+      <div class="tabs">
+        <div id="tab1" class="page-content tab active">
+          <div class="content-block-title">Istoric vizite</div>
+
+          <div class="list-block cards-list">
+            <ul>
+              <li class="card">
+                <div class="card">
+                  <div class="card-header">18 iunie 2015</div>
+                  <div class="card-content">
+                    <div class="card-content-inner">Splaiul Independentei 169, Bucuresti</div>
+                  </div>
+                  <div class="card-footer">{{> xvendo_barcoder id="idme" ean="1234567890123"}}</div>
+                </div>
+              </li>
+              <li class="card">
+                <div class="card">
+                  <div class="card-header">20 ianuarie 2016</div>
+                  <div class="card-content">
+                    <div class="card-content-inner">Splaiul Independentei 169, Bucuresti</div>
+                  </div>
+                  <div class="card-footer">{{> xvendo_barcoder id="idme" ean="1234567890123"}}</div>
+                </div>
+              </li>
+              <li class="card">
+                <div class="card">
+                  <div class="card-header">03 august 2016</div>
+                  <div class="card-content">
+                    <div class="card-content-inner">Splaiul Independentei 169, Bucuresti</div>
+                  </div>
+                  <div class="card-footer">{{> xvendo_barcoder id="idme" ean="1234567890123"}}</div>
+                </div>
+              </li>
+
+              
+            </ul>
+          </div>
+          
+        </div>
+        <!-- / tab1 -->
+        <div id="tab2" class="page-content tab">
+          <div class="content-block">
+            <p>This is tab 2 content</p>
+            <p>Ut ac lobortis lacus, non pellentesque arcu. Quisque sodales sapien malesuada, condimentum nunc at, viverra lacus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Vivamus eu pulvinar turpis, id tristique quam. Aenean venenatis molestie diam, sit amet condimentum nisl pretium id. Donec diam tortor, mollis in vehicula id, vehicula consectetur nulla. Quisque posuere rutrum mauris, eu rutrum turpis blandit at. Proin volutpat tortor sit amet metus porttitor accumsan. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Ut dapibus posuere dictum.</p>
+            <p>Fusce luctus turpis nunc, id porta orci blandit eget. Aenean sodales quam nec diam varius, in ornare ipsum condimentum. Aenean eleifend, nulla sit amet volutpat adipiscing, ligula nulla pharetra risus, vitae consequat leo tortor eu nunc. Vivamus at fringilla metus. Duis neque lectus, sagittis in volutpat a, pretium vel turpis. Nam accumsan auctor libero, quis sodales felis faucibus quis. Etiam vestibulum sed nisl vel aliquet. Aliquam pellentesque leo a lacus ultricies scelerisque. Vestibulum vestibulum fermentum tincidunt. Proin eleifend metus non quam pretium, eu vehicula ipsum egestas. Nam eget nibh enim. Etiam sem leo, pellentesque a elit vel, egestas rhoncus enim. Morbi ultricies adipiscing tortor, vitae condimentum lacus hendrerit nec. Phasellus laoreet leo quis purus elementum, ut fringilla justo eleifend. Nunc ultricies a sapien vitae auctor. Aliquam id erat elementum, laoreet est et, dapibus ligula.</p>
+          </div>
+        </div>
+        <!-- / tab2 -->
+      </div>
+    </div>
+  </div>
 </template>
+
+
+

@@ -3,6 +3,20 @@ import { ReactiveVar } from 'meteor/reactive-var';
 
 import './main.html';
 
+// Initialize app
+var myApp = new Framework7({
+  modalTitle: 'Carnet de Donator',
+  // Enable Material theme
+  material: true,
+  domCache: true //enable inline pages
+});
+
+// If we need to use custom DOM library, let's save it to $$ variable:
+var $$ = Dom7;
+
+var mainView = myApp.addView('.view-main', {
+});
+
 Template.hello.onCreated(function helloOnCreated() {
   // counter starts at 0
   this.counter = new ReactiveVar(0);
@@ -20,3 +34,4 @@ Template.hello.events({
     instance.counter.set(instance.counter.get() + 1);
   },
 });
+
