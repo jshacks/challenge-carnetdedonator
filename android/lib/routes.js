@@ -1,6 +1,6 @@
 FlowRouter.route( '/', {
   action: function() {
-    BlazeLayout.render( 'applicationLayout', { main: 'main' } ); 
+    BlazeLayout.render( 'applicationLayout', { main: 'main' } );
   },
   name: 'main'
 });
