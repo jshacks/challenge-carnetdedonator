@@ -16,3 +16,6 @@
 li.card {
   margin-bottom: 15px;
 }
+.card p {
+  font-size: 16px;
+}
