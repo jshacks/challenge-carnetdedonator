@@ -35,3 +35,13 @@ Template.hello.events({
   },
 });
 
+//invoke the server method
+if (Meteor.isClient) {
+  Meteor.call("checkVisits", function(error, results) {
+    console.log(results.content); //results.data should be a JSON object
+  });
+  Meteor.call("checkAlerts", function(error, results) {
+    console.log(results.content); //results.data should be a JSON object
+  });
+}
+
