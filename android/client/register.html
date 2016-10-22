@@ -7,54 +7,72 @@
     </div>
   </div>
   <div class="content-block-title">Va rugam sa completati datele dvs. de inregistrare</div>
-  <div class="list-block inset">
-    <ul>
-      <li>
-        <div class="item-content">
-          <div class="item-inner">
-            <div class="item-input">
-              <input id="lastName" type="text" placeholder="Nume">
+  <div class="list-block register-block inset">
+    <form id="registerForm">
+      <ul>
+        <li>
+          <div class="item-content">
+            <div class="item-inner">
+              <div class="item-input">
+                <input id="lastName" type="text" placeholder="Nume">
+              </div>
             </div>
           </div>
-        </div>
-      </li>
-      <li>
-        <div class="item-content">
-          <div class="item-inner">
-            <div class="item-input">
-              <input id="firstName" type="text" placeholder="Prenume">
+        </li>
+        <li>
+          <div class="item-content">
+            <div class="item-inner">
+              <div class="item-input">
+                <input id="firstName" type="text" placeholder="Prenume">
+              </div>
             </div>
           </div>
-        </div>
-      </li>
-      <li>
-        <div class="item-content">
-          <div class="item-inner">
-            <div class="item-input">
-              <input id="email" type="email" placeholder="E-mail">
+        </li>
+        <li>
+          <div class="item-content">
+            <div class="item-inner">
+              <div class="item-input">
+                <input id="email" type="email" placeholder="E-mail">
+              </div>
             </div>
           </div>
-        </div>
-      </li>
-      <li>
-        <div class="item-content">
-          <div class="item-inner">
-            <div class="item-input">
-              <input id="cnp" type="number" placeholder="CNP">
+        </li>
+        <li>
+          <ul class="no-padding">
+            <li>
+              <label class="label-radio item-content">RH pozitiv
+                <!-- Checked by default -->
+                <input type="radio" id="pozitiv" name="rh" value="pozitiv" checked="checked">
+              </label>
+            </li>
+            <li>
+              <label class="label-radio item-content">RH negativ
+                <!-- Checked by default -->
+                <input type="radio" id="negativ" name="rh" value="negativ" checked="checked">
+              </label>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <div class="item-content">
+            <div class="item-inner">
+              <div class="item-input">
+                <input id="cnp" type="number" placeholder="CNP">
+              </div>
             </div>
           </div>
-        </div>
-      </li>
-      <li>
-        <div class="item-content">
-          <div class="item-inner">
-            <div class="item-input">
-              <input id="password" type="password" placeholder="Parola">
+        </li>
+        <li>
+          <div class="item-content">
+            <div class="item-inner">
+              <div class="item-input">
+                <input id="password" type="password" placeholder="Parola">
+              </div>
             </div>
           </div>
-        </div>
-      </li>
-    </ul>
+        </li>
+      </ul>
+    </form>
   </div> 
-  <p><a href="#" class="button button-fill button-raised">Inregistrare</a></p>
+  <p><a href="#" id="registerSubmit" class="button button-fill button-raised">Inregistrare</a></p>
 </template>

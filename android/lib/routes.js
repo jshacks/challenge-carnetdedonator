@@ -18,3 +18,10 @@ FlowRouter.route( '/login', {
   },
   name: 'login'
 });
+
+FlowRouter.route( '/welcome', {
+  action: function() {
+    BlazeLayout.render( 'applicationLayout', { main: 'welcome' } ); 
+  },
+  name: 'welcome'
+});
