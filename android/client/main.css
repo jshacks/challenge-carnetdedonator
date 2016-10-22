@@ -1,3 +1,13 @@
+.tabs-animated-wrap, .tabbar {
+  top: 50px;
+}
+.navbar-inner .center {
+  margin: 0 auto;
+  font-size: 22px;
+}
+.cards-list {
+  padding-bottom: 50px;
+}
 .list-block ul ul {
   padding-left: 0;
 }
@@ -29,7 +39,12 @@ li.card {
 .register-block label.label-radio {
   padding-left: 50px;
 }
-
+.canvas-wrapper {
+  padding: 5px 10px;
+}
+.canvas-wrapper canvas {
+  height: 50px;
+}
 label.error {
   color: red;
   font-size: 14px;

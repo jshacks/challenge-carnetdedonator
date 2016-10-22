@@ -1,7 +1,6 @@
 <head>
-  <title>android</title>
+  <title>Carnet de Donator</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-
 </head>
 
 <body>
@@ -13,25 +12,31 @@
 </template>
 
 <template name="main">
-  <div data-page="tabs-static" class="page view view-main tabs-static toolbar-fixed">
-    <div class="toolbar tabbar">
-      <div class="toolbar-inner"><a href="#tab1" class="active tab-link">Istoric vizite</a><a href="#tab2" class="tab-link">Alerte</a>
-      <span class="tab-link-highlight" style="width: 50%; transform: translate3d(0%, 0px, 0px);"></span>
-      </div>
-    </div>
-    <div class="tabs-animated-wrap">
-      <div class="tabs">
-        <div id="tab1" class="page-content tab active">
-          {{> visitsHistory}}
-        </div>
-        <!-- / tab1 -->
-        <div id="tab2" class="page-content tab">
-          {{> alertsHistory}}    
-        </div>
-        <!-- / tab2 -->
-      </div>
+<div class="page view view-main tabs-static toolbar-fixed">
+  <!-- Top Navbar-->
+  <div class="navbar">
+    <div class="navbar-inner">
+      <div class="center">Carnet de Donator</div>
     </div>
   </div>
+  <div class="toolbar tabbar">
+    <div class="toolbar-inner"><a href="#tab1" class="active tab-link">Istoric vizite</a><a href="#tab2" class="tab-link">Alerte</a>
+    <span class="tab-link-highlight" style="width: 50%; transform: translate3d(0%, 0px, 0px);"></span>
+    </div>
+  </div>
+  <div class="tabs-animated-wrap">
+    <div class="tabs">
+      <div id="tab1" class="page-content tab active">
+        {{> visitsHistory}}
+      </div>
+      <!-- / tab1 -->
+      <div id="tab2" class="page-content tab">
+        {{> alertsHistory}}    
+      </div>
+      <!-- / tab2 -->
+    </div>
+  </div>
+</div>
 </template>
 
 
