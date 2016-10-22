@@ -1,5 +1,0 @@
-# Project FAQ
-
-## Question?
-
-Answer
