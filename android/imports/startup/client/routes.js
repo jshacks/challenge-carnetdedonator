@@ -1,3 +1,14 @@
+import { FlowRouter } from 'meteor/kadira:flow-router';
+import { BlazeLayout } from 'meteor/kadira:blaze-layout';
+
+import '../../ui/body.js';
+import '../../ui/donations.js';
+import '../../ui/alerts.js';
+import '../../ui/register.js';
+import '../../ui/login.js';
+import '../../ui/welcome.html';
+
+
 FlowRouter.route( '/', {
   action: function() {
     BlazeLayout.render( 'applicationLayout', { main: 'main' } );
@@ -25,3 +36,4 @@ FlowRouter.route( '/welcome', {
   },
   name: 'welcome'
 });
+FlowRouter.initialize();
