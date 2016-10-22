@@ -5,3 +5,14 @@
   background: #f44336;
   color: #fff;
 }
+.card-header {
+  font-weight: bold;
+}
+.content-block-title {
+  font-size: 18px;
+  line-height: 1.5;
+  white-space: normal;
+}
+li.card {
+  margin-bottom: 15px;
+}
