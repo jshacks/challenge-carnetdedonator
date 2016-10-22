@@ -1,0 +1,37 @@
+<template name="visitsHistory">
+  <div class="content-block-title">Istoric vizite</div>
+    <div class="list-block cards-list">
+      <ul>
+        <li class="card">
+            <div class="card-header">Spitalul Universitar</div>
+            <div class="card-content">
+              <div class="card-content-inner">
+                  <p>Splaiul Independentei 169, Bucuresti</p>
+                  {{> xvendo_barcoder id="idme1" ean="1234567890123"}}
+              </div>
+            </div>
+            <div class="card-footer">18 iunie 2015</div>
+        </li>
+        <li class="card">
+            <div class="card-header">Spitalul Universitar</div>
+            <div class="card-content">
+                <div class="card-content-inner">
+                    <p>Splaiul Independentei 169, Bucuresti</p>
+                    {{> xvendo_barcoder id="idme2" ean="1934527820123"}}
+                </div>
+            </div>
+            <div class="card-footer">22 ianuarie 2016</div>
+        </li>
+          <li class="card">
+              <div class="card-header">Spitalul Universitar</div>
+              <div class="card-content">
+                  <div class="card-content-inner">
+                      <p>Splaiul Independentei 169, Bucuresti</p>
+                      {{> xvendo_barcoder id="idme3" ean="1134527829123"}}
+                  </div>
+              </div>
+              <div class="card-footer">10 septembrie 2016</div>
+          </li>
+      </ul>
+    </div>
+</template>
