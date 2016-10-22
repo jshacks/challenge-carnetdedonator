@@ -1,12 +1,3 @@
-<head>
-  <title>Carnet de Donator</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-</head>
-
-<body>
-  {{> applicationLayout}}
-</body>
-
 <template name="applicationLayout">
   {{> Template.dynamic template=main}}
 </template>
@@ -23,6 +14,7 @@
     <div class="toolbar-inner"><a href="#tab1" class="active tab-link">Istoric vizite</a><a href="#tab2" class="tab-link">Alerte</a>
     <span class="tab-link-highlight" style="width: 50%; transform: translate3d(0%, 0px, 0px);"></span>
     </div>
+  </div>
     <div class="tabs-animated-wrap">
       <div class="tabs">
         <div id="tab1" class="page-content tab active">
@@ -37,7 +29,6 @@
       <!-- / tab2 -->
     </div>
   </div>
-</div>
 </template>
 
 

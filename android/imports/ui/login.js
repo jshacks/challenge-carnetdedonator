@@ -1,3 +1,6 @@
+import { Template } from 'meteor/templating';
+import './login.html';
+
 Template.login.onRendered( function() {
   $( "#loginForm" ).validate();
 });

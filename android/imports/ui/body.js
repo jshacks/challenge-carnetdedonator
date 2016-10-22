@@ -2,6 +2,11 @@ import { Template } from 'meteor/templating';
 import { ReactiveVar } from 'meteor/reactive-var';
 
 import './body.html';
+import './donations.html';
+import './alerts.html';
+import './register.html';
+import './login.html';
+import './welcome.html';
 
 // Initialize app
 var myApp = new Framework7({
@@ -14,8 +19,7 @@ var myApp = new Framework7({
 // If we need to use custom DOM library, let's save it to $$ variable:
 var $$ = Dom7;
 
-var mainView = myApp.addView('.view-main', {
-});
+var mainView = myApp.addView('.view-main');
 
 // Template.main.onCreated(function() {
 //   this.visitsHistory = new ReactiveVar;
