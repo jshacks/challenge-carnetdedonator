@@ -26,3 +26,4 @@ http
 simple:reactive-method
 themeteorchef:jquery-validation
 accounts-ui
+aldeed:simple-schema

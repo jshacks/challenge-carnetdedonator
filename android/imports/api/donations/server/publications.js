@@ -1,12 +1,10 @@
 import { Meteor } from 'meteor/meteor';
-import { Mongo } from 'meteor/mongo';
-import { check } from 'meteor/check';
 
-export const Donations = new Mongo.Collection('donations');
+import { Donations } from '../donations.js';
 
 if (Meteor.isServer) {
   // This code only runs on the server
   Meteor.publish('donations', function donationsPublication() {
-    return Donations.find();
+    return Donations.find({owner: this.userId});
   });
 }
