@@ -1,20 +1,17 @@
-import { Template } from 'meteor/templating';
-
-Template.register.onRendered( function() {
-  $( "#registerForm" ).validate();
+Template.login.onRendered( function() {
+  $( "#loginForm" ).validate();
 });
-
-Template.register.events({
+Template.login.events({
   'submit form' ( event, template ) {
     event.preventDefault();
     
     let data = {
-      emailAddress: template.find( '#lastName' ).value,
+      emailAddress: template.find( '#email' ).value,
       password: template.find( '#password' ).value
     };
     console.log(data);
   },
-  'click #registerSubmit' (event, template) {
+  'click #loginSubmit' (event, template) {
     event.preventDefault();
     console.log(event);
     template.find('form').submit();

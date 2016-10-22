@@ -2,18 +2,19 @@
   <!-- Top Navbar-->
   <div class="navbar">
     <div class="navbar-inner">
-      <div class="left"><a href="index.html" class="back link icon-only"><i class="icon icon-back"></i></a></div>
+      <div class="left"><a href="{{pathFor 'welcome'}}" class="back link icon-only"><i class="icon icon-back"></i></a></div>
     <div class="center">Autentificare</div>
     </div>
   </div>
   <div class="content-block-title">Va rugam sa completati datele dvs. de autentificare</div>
   <div class="list-block inset">
+    <form id="loginForm">
     <ul>
       <li>
         <div class="item-content">
           <div class="item-inner">
             <div class="item-input">
-              <input id="email" type="email" placeholder="E-mail">
+              <input id="email" class="required email" type="email" placeholder="E-mail">
             </div>
           </div>
         </div>
@@ -22,12 +23,13 @@
         <div class="item-content">
           <div class="item-inner">
             <div class="item-input">
-              <input id="password" type="password" placeholder="Parola">
+              <input id="password" class="required password" type="password" placeholder="Parola">
             </div>
           </div>
         </div>
       </li>
     </ul>
+    <p><input type="submit" class="button button-fill button-raised" value="Autentificare"/></p>
+    </form>
   </div> 
-  <p><a href="#" class="button button-fill button-raised">Autentificare</a></p>
 </template>
