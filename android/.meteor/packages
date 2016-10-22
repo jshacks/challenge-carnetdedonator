@@ -24,3 +24,5 @@ loftsteinn:framework7-material
 kadira:flow-router
 kadira:blaze-layout
 xvendo:barcoder
+http
+simple:reactive-method

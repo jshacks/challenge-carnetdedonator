@@ -17,14 +17,26 @@ var $$ = Dom7;
 var mainView = myApp.addView('.view-main', {
 });
 
-Template.hello.onCreated(function helloOnCreated() {
-  // counter starts at 0
-  this.counter = new ReactiveVar(0);
-});
+// Template.main.onCreated(function() {
+//   this.visitsHistory = new ReactiveVar;
+//   Meteor.call('checkVisits', function(error, response){
+//     this.visitsHistory.set(response.content);
+//   });
 
-Template.hello.helpers({
-  counter() {
-    return Template.instance().counter.get();
+//   this.alertsHistory = new ReactiveVar;
+//   Meteor.call('checkAlerts', function(error, response){
+//     this.alertsHistory.set(response.content);
+//   });
+// });
+
+Template.main.helpers({
+  visitsHistory: function() {
+    var result = ReactiveMethod.call('checkVisits');
+    return result.content;
+  },
+  alertsHistory: function() {
+    var result = ReactiveMethod.call('checkAlerts');
+    return result.content;
   },
 });
 
@@ -35,13 +47,4 @@ Template.hello.events({
   },
 });
 
-//invoke the server method
-if (Meteor.isClient) {
-  Meteor.call("checkVisits", function(error, results) {
-    console.log(results.content); //results.data should be a JSON object
-  });
-  Meteor.call("checkAlerts", function(error, results) {
-    console.log(results.content); //results.data should be a JSON object
-  });
-}
 
