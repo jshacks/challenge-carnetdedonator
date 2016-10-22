@@ -29,3 +29,8 @@ li.card {
 .register-block label.label-radio {
   padding-left: 50px;
 }
+
+label.error {
+  color: red;
+  font-size: 14px;
+}
