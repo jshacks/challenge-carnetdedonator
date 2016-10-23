@@ -51,6 +51,7 @@ logging@1.1.15_1
 mdg:validation-error@0.2.0
 meteor@1.2.17_1
 meteor-base@1.0.4
+meteor-tool@1.4.1_3
 minifier-css@1.2.14_1
 minifier-js@1.2.14_1
 minimongo@1.0.17
