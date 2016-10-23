@@ -11,14 +11,12 @@ import { Donations } from '../api/donations/donations.js';
 
 import './donations.html';
 
-Template.donations.onRendered({
-  donationsList() { 
-      return [
+Template.donations.helpers({
+    donationsList: [
         { text: 'This is task 1' },
         { text: 'This is task 2' },
         { text: 'This is task 3' },
-      ];
-  }
+      ]
 });
 
 
