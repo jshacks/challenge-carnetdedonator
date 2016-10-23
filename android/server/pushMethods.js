@@ -18,7 +18,7 @@ Meteor.methods({
       payload: {
         title: title,
         text:text,
-        historyId: result
+        historyId: 123
       },
       query: {
         // this will send to all users
