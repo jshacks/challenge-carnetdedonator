@@ -1,85 +1,110 @@
 import { Meteor } from 'meteor/meteor';
 import { Accounts } from 'meteor/accounts-base';
 import { Donations } from '../../api/donations/donations.js';
+import { Alerts } from '../../api/alerts/alerts.js';
 
 // if the database is empty on server start, create some sample data.
 Meteor.startup(() => {
-  if (Meteor.users.find().count() === 0) {
-    const data = [
-      {
-        name: 'Laura Ionescu',
-        cnp: '2880208123412',
-        email: 'laura.ionescu@mailinator.com',
-        bloodType: '01',
-        rh: '+',
-        latitude: 44.4268,
-        longitude: 26.1025,
-        donations: [{
-          date: new Date(2016, 0, 15),
-          center: 'Centrul de Transfuzie Sanguină București',
-          address: 'Str. C.Caracaş nr. 2-8'
-        }, {
-          date: new Date(2016, 3, 23),
-          center: 'Institutul Clinic Fundeni',
-          address: 'Calea București 258'
-        }, {
-          date: new Date(2016, 7, 31),
-          center: 'Spitalul Universitar de Urgență',
-          address: 'Splaiul Independenței nr. 69'
-        }],
-      },
-      {
-        name: 'Vlad Bărbulescu',
-        cnp: '1750208432135',
-        email: 'vladb@mailinator.com',
-        bloodType: 'AB4',
-        rh: '+',
-        latitude: 44.4268,
-        longitude: 26.1025,
-        donations: [{
-          date: new Date(2015, 10, 8),
-          center: 'Spitalul Militar',
-          address: 'Str. Mircea Vulcănescu 88'
-        },{
-          date: new Date(2016, 1, 8),
-          center: 'Centrul de Transfuzie Sanguină București',
-          address: 'Str. C.Caracaş nr. 2-8'
-        }, {
-          date: new Date(2016, 5, 1),
-          center: 'Spitalul Universitar de Urgență',
-          address: 'Splaiul Independenței nr. 69'
-        }, {
-          date: new Date(2016, 9, 22),
-          center: 'Institutul Clinic Fundeni',
-          address: 'Calea București 258'
-        }],
-      }
-    ];
+  if (Donations.find().count() === 0) {
+    var now = new Date().getTime();
 
-    let timestamp = (new Date()).getTime();
+    var bogdanId = Meteor.users.insert({
+      profile: { name: 'Bogdan Ghervan', gender: 'm', location: 'Bucuresti'  }
+    });
+    var bogdan = Meteor.users.findOne(bogdanId);
 
-    data.forEach((user) => {
-      const userId = Accounts.createUser({
-        name: user.name,
-        cnp: user.cnp,
-        email: user.email,
-        bloodType: user.bloodType,
-        rh: user.rh,
-        latitude: user.latitude,
-        longitude: user.longitude
-      });
+    Donations.insert({
+      name: 'Spitalul Colentina',
+      userId: bogdan._id,
+      date: new Date(now - 10 * 3600 * 1000),
+      address: 'Stefan cel Mare 102',
+      city: 'Bucuresti',
+      code: '1234567890123'
+    });
+    Donations.insert({
+      name: 'Spitalul Colentina',
+      userId: bogdan._id,
+      date: new Date(now - 2 * 3600 * 1000),
+      address: 'Stefan cel Mare 102',
+      city: 'Bucuresti',
+      code: '1234567890124'
+    });
+    Donations.insert({
+      name: 'Spitalul Colentina',
+      userId: bogdan._id,
+      date: new Date(now - 5 * 3600 * 1000),
+      address: 'Stefan cel Mare 102',
+      city: 'Bucuresti',
+      code: '1234567890125'
+    });
+  }
 
-      user.donations.forEach((donation) => {
-        Donations.insert({
-          userId: userId,
-          date: donation.date,
-          center: donation.center,
-          address: donation.address,
-          createdAt: new Date(timestamp)
-        });
+  if (Alerts.find().count() === 0) {
+    var now = new Date().getTime();
 
-        timestamp += 1;
-      });
+    var bogdanId = Meteor.users.insert({
+      profile: { name: 'Bogdan Ghervan', gender: 'm', location: 'Bucuresti'  }
+    });
+    var bogdan = Meteor.users.findOne(bogdanId);
+
+    Alerts.insert({
+      name: 'Spitalul Colentina',
+      userId: bogdan._id,
+      date: new Date(now - 10 * 3600 * 1000),
+      address: 'Stefan cel Mare 102',
+      city: 'Bucuresti',
+      bloodTypes: [ {
+          bloodType: '01',
+          rh: 'pozitiv'
+        },
+        {
+          bloodType: 'A2',
+          rh: 'negativ'
+        },
+        {
+          bloodType: 'AB4',
+          rh: 'pozitiv'
+        }
+      ],
+      code: '1234567890123'
+    });
+    Alerts.insert({
+      name: 'Spitalul Colentina',
+      userId: bogdan._id,
+      date: new Date(now - 2 * 3600 * 1000),
+      address: 'Stefan cel Mare 102',
+      bloodTypes: [ {
+          bloodType: '01',
+          rh: 'pozitiv'
+        },
+        {
+          bloodType: 'A2',
+          rh: 'negativ'
+        }
+      ],
+      city: 'Bucuresti',
+      code: '1234567890124'
+    });
+    Alerts.insert({
+      name: 'Spitalul Colentina',
+      userId: bogdan._id,
+      date: new Date(now - 5 * 3600 * 1000),
+      address: 'Stefan cel Mare 102',
+      city: 'Bucuresti',
+      bloodTypes: [ {
+          bloodType: '01',
+          rh: 'pozitiv'
+        },
+        {
+          bloodType: 'B3',
+          rh: 'negativ'
+        },
+        {
+          bloodType: 'AB4',
+          rh: 'pozitiv'
+        }
+      ],
+      code: '1234567890125'
     });
   }
 });

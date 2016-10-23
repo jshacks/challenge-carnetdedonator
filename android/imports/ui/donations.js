@@ -11,19 +11,9 @@ import { Donations } from '../api/donations/donations.js';
 
 import './donations.html';
 
-Template.donations.onRendered({
-  donationsList() { 
-      return [
-        { text: 'This is task 1' },
-        { text: 'This is task 2' },
-        { text: 'This is task 3' },
-      ];
-  }
+
+Template.donations.helpers({
+ donations() {
+   return Donations.find({});
+ },
 });
-
-
-//Template.body.helpers({
-//  donations() {
-//    return Donations.find({});
-//  },
-//});

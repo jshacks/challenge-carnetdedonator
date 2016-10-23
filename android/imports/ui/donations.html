@@ -2,18 +2,18 @@
     <div class="content-block-title">Istoric vizite</div>
     <div class="list-block cards-list">
         <ul>
-            {{#each donationsList}}
-            <li>x</li>
-            {{else}}
-            <li>y</li>
+            {{#each donations}}
+            <li class="card">
+                <div class="card-header">{{name}}</div>
+                <div class="card-content">
+                  <div class="card-content-inner">
+                    <p>{{adress}}, {{city}}</p>
+                    {{> xvendo_barcoder id="idme1" ean="{{code}}"}}
+                  </div>
+                </div>
+                <div class="card-footer">{{date}}</div>
+              </li>
             {{/each}}
         </ul>
-    </div> 
+    </div>
 </template>
-
-<template name="donation">
-  <li>{{text}}</li>
-</template>
-
-
-

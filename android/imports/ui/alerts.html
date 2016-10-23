@@ -2,65 +2,25 @@
   <div class="content-block-title">Istoric alerte</div>
     <div class="list-block cards-list">
         <ul>
-        <!-- {{#each alert in alertsHistory}} -->
+        {{#each alerts}}
           <li class="card">
-            <div class="card-header">Spitalul Universitar</div>
+            <div class="card-header">{{name}}</div>
             <div class="card-content">
                 <div class="card-content-inner">
-                  <p>Splaiul Independentei 169, Bucuresti</p>
+                  <p>{{address}}, {{city}}</p>
                   <p>Grupe de sange necesare:</p>
                   <ul class="groups-list">
-                    <li class="chip">
-                      <div class="chip-label">A2 RH pozitiv</div>
-                    </li>
-                    <li class="chip">
-                      <div class="chip-label">B3 RH negativ</div>
-                    </li>
+                    {{#each bloodTypes}}
+                      <li class="chip">
+                        <div class="chip-label">{{bloodType}} RH {{rh}}</div>
+                      </li>
+                    {{/each}}
                   </ul>
                 </div>
             </div>
-            <div class="card-footer">18 iunie 2015</div>
+            <div class="card-footer">{{date}}</div>
           </li>
-        <!-- {{/each}} -->
-          <li class="card">
-            <div class="card-header">Spitalul Universitar</div>
-            <div class="card-content">
-                <div class="card-content-inner">
-                  <p>Splaiul Independentei 169, Bucuresti</p>
-                  <p>Grupe de sange necesare:</p>
-                  <ul class="groups-list">
-                    <li class="chip">
-                      <div class="chip-label">A2 RH pozitiv</div>
-                    </li>
-                    <li class="chip">
-                      <div class="chip-label">B3 RH negativ</div>
-                    </li>
-                  </ul>
-                </div>
-            </div>
-            <div class="card-footer">18 iunie 2015</div>
-          </li>
-          <li class="card">
-            <div class="card-header">Spitalul Universitar</div>
-            <div class="card-content">
-                <div class="card-content-inner">
-                  <p>Splaiul Independentei 169, Bucuresti</p>
-                  <p>Grupe de sange necesare:</p>
-                  <ul class="groups-list">
-                    <li class="chip">
-                      <div class="chip-label">A2 RH pozitiv</div>
-                    </li>
-                    <li class="chip">
-                      <div class="chip-label">B3 RH negativ</div>
-                    </li>
-                    <li class="chip">
-                      <div class="chip-label">0 RH negativ</div>
-                    </li>
-                  </ul>
-                </div>
-            </div>
-            <div class="card-footer">18 iunie 2015</div>
-          </li>
+        {{/each}}
         </ul>
     </div>
 </template>
