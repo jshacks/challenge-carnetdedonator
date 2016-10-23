@@ -5,14 +5,24 @@
             {{#each donationsList}}
             <li>{{> donation}}</li>
             {{else}}
-            <li>y</li>
+            <li>Nu aveti un istoric al donarilor.</li>
             {{/each}}
         </ul>
     </div> 
 </template>
 
 <template name="donation">
-  <li>{{center}}</li>
+        <li class="card">
+        <div class="card-header">{{center}}</div>
+        <div class="card-content">
+          <div class="card-content-inner">
+            <p>{{address}}</p>
+            <span class="canvas-wrapper">{{> xvendo_barcoder id="idme1" ean="1234567890123"}}</span>
+          </div>
+        </div>
+        <div class="card-footer">{{date}}</div>
+      </li>
+
 </template>
 
 
