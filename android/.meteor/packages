@@ -32,3 +32,4 @@ arillo:flow-router-helpers
 raix:push
 autopublish
 meteor-tool
+momentjs:moment

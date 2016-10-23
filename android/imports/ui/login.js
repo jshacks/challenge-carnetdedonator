@@ -10,7 +10,7 @@ Template.login.events({
     event.preventDefault();
     
     let data = {
-      emailAddress: template.find( '#email' ).value,
+      email: template.find( '#email' ).value,
       password: template.find( '#password' ).value
     };
     Meteor.loginWithPassword(data.emailAddress, data.password, function(Error) {

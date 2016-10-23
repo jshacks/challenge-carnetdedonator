@@ -14,6 +14,7 @@ import './donations.html';
 
 Template.donations.helpers({
  donations() {
-   return Donations.find({});
+  // let userId = Meteor.user().email;
+   return Donations.find();
  },
 });

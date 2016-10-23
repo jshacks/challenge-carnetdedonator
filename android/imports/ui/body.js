@@ -19,7 +19,9 @@ var myApp = new Framework7({
 // If we need to use custom DOM library, let's save it to $$ variable:
 var $$ = Dom7;
 
-
+Template.registerHelper( 'formatDate', (date) => {
+  return moment(date).fromNow();
+});
 
 Template.main.onRendered(function() {
   var mainView = myApp.addView('.view-main');

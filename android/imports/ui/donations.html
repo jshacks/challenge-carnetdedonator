@@ -1,19 +1,23 @@
 <template name="donations">
-    <div class="content-block-title">Istoric vizite</div>
+    <div class="content-block-title">Istoricul vizitelor tale</div>
     <div class="list-block cards-list">
+    {{#if donations}}
         <ul>
             {{#each donations}}
             <li class="card">
                 <div class="card-header">{{name}}</div>
                 <div class="card-content">
                   <div class="card-content-inner">
-                    <p>{{adress}}, {{city}}</p>
-                    {{> xvendo_barcoder id="idme1" ean="{{code}}"}}
+                    <p>Adresa: <strong>{{address}}, {{city}}</strong></p>
+                    <p> Cod donatie: <strong>{{code}}</strong></p>
                   </div>
                 </div>
-                <div class="card-footer">{{date}}</div>
+                <div class="card-footer">{{formatDate date}}</div>
               </li>
             {{/each}}
         </ul>
+    {{else}}
+        <h3>Momentan nu ai nicio vizita in istoric. Te asteptam sa vii la un centru de donare.</h3>
+    {{/if}}
     </div>
 </template>
