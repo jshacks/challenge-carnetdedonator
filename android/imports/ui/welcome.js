@@ -7,5 +7,8 @@ Template.welcome.events({
 
   'click .toRegister' () {
     FlowRouter.go('register');
+  },
+  'click .toLogin' () {
+    FlowRouter.go('login');
   }
 });

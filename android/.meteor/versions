@@ -62,6 +62,7 @@ modules-runtime@0.7.6_1
 momentjs:moment@2.15.1
 mongo@1.1.13
 mongo-id@1.0.5
+natestrauser:animate-css@3.5.1
 npm-bcrypt@0.9.1_1
 npm-mongo@2.2.11_1
 observe-sequence@1.0.13

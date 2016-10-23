@@ -17,8 +17,8 @@ Template.login.events({
       if (Error) {
         console.log(Error.reason);
       } else {
-        console.log('yuhuu');
-        FlowRouter.go('/');
+        // console.log('yuhuu');
+        FlowRouter.go('/main');
       }
     })
     console.log(data);
@@ -29,6 +29,6 @@ Template.login.events({
     template.find('form').submit();
   },
   'click .back' (event) {
-    FlowRouter.go('welcome');
+    FlowRouter.go('/');
   }
 });

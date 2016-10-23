@@ -10,7 +10,7 @@ import '../../ui/login.js';
 import '../../ui/welcome.js';
 
 
-FlowRouter.route( '/', {
+FlowRouter.route( '/main', {
   action: function() {
     BlazeLayout.render( 'applicationLayout', { main: 'main' } );
   },
@@ -31,7 +31,7 @@ FlowRouter.route( '/login', {
   name: 'login'
 });
 
-FlowRouter.route( '/welcome', {
+FlowRouter.route( '/', {
   action: function() {
     BlazeLayout.render( 'applicationLayout', { main: 'welcome' } ); 
   },

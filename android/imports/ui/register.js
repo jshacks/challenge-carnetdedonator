@@ -33,12 +33,12 @@ Template.register.events({
      if (error) {
       console.log("Error: " + error.reason);
     } else {
-      FlowRouter.go('/');
+      FlowRouter.go('/main');
     }
   });
     return false;
   },
   'click .back' (event) {
-    FlowRouter.go('welcome');
+    FlowRouter.go('/');
   }
 });
