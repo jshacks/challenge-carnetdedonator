@@ -4,17 +4,19 @@ import { ReactiveDict } from 'meteor/reactive-dict';
 import { Donations } from '../api/donations/donations.js';
 
 
-Template.body.onCreated(function bodyOnCreated() {
-  this.state = new ReactiveDict();
-  Meteor.subscribe('donations');
-});
+//Template.body.onCreated(function bodyOnCreated() {
+//  this.state = new ReactiveDict();
+//  Meteor.subscribe('donations');
+//});
 
 import './donations.html';
 
-Template.donations.helpers({    
-    donationsList() {
-        return Donations.find({});
-    }
+Template.donations.helpers({
+    donationsList: [
+        { text: 'This is task 1' },
+        { text: 'This is task 2' },
+        { text: 'This is task 3' },
+      ]
 });
 
 
