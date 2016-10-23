@@ -1,7 +1,7 @@
 import { Meteor } from 'meteor/meteor';
 import { Template } from 'meteor/templating';
 import { ReactiveDict } from 'meteor/reactive-dict';
-import { Donations } from '../api/donations.js';
+import { Donations } from '../api/donations/donations.js';
 
 
 //Template.body.onCreated(function bodyOnCreated() {
@@ -11,7 +11,7 @@ import { Donations } from '../api/donations.js';
 
 import './donations.html';
 
-Template.donations.onRender({
+Template.donations.onRendered({
   donationsList() { 
       return [
         { text: 'This is task 1' },

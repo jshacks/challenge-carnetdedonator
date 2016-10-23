@@ -5,6 +5,7 @@ accounts-ui-unstyled@1.1.12
 aldeed:simple-schema@1.5.3
 allow-deny@1.0.5
 arillo:flow-router-helpers@0.5.2
+autopublish@1.0.7
 autoupdate@1.2.11
 babel-compiler@6.9.1_1
 babel-runtime@0.1.11_1
