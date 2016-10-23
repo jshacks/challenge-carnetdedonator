@@ -7,7 +7,7 @@ import '../../ui/donations.js';
 import '../../ui/alerts.js';
 import '../../ui/register.js';
 import '../../ui/login.js';
-import '../../ui/welcome.html';
+import '../../ui/welcome.js';
 
 
 FlowRouter.route( '/', {

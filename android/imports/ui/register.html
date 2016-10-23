@@ -38,15 +38,30 @@
           </div>
         </li>
         <li>
+          <div class="item-content">
+            <div class="item-inner">
+              <div class="item-title floating-label">Grupa de Sange</div>
+                <div class="item-input item-input-field">
+                  <select class="required select" id="blood" name="blood" >
+                    <option value="01">01</option>
+                    <option value="a2">A2</option>
+                    <option value="b3">B3</option>
+                    <option value="ab4">AB4</option>
+                  </select>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li>
           <ul class="no-padding">
             <li>
               <label class="label-radio item-content">RH pozitiv
-                <input type="checkbox" id="pozitiv" name="rh" value="pozitiv">
+                <input type="radio" id="pozitiv" name="rh" value="pozitiv">
               </label>
             </li>
             <li>
               <label class="label-radio item-content">RH negativ
-                <input class="required number" type="checkbox" id="negativ" name="rh" value="negativ">
+                <input class="required number" type="radio" id="negativ" name="rh" value="negativ">
               </label>
             </li>
           </ul>
