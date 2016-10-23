@@ -3,7 +3,7 @@
     <div class="list-block cards-list">
         <ul>
             {{#each donationsList}}
-            <li>x</li>
+            <li>{{> donation}}</li>
             {{else}}
             <li>y</li>
             {{/each}}
@@ -12,7 +12,7 @@
 </template>
 
 <template name="donation">
-  <li>{{text}}</li>
+  <li>{{center}}</li>
 </template>
 
 
