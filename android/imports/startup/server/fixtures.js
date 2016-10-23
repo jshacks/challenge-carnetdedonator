@@ -305,7 +305,7 @@ Meteor.startup(() => {
       date: new Date(now - 3800 * 3600 * 1000),
       address: 'Stefan cel Mare 102',
       city: 'Bucuresti',
-      status: 'active',
+      status: 'Activa',
       bloodTypes: [ {
         bloodType: '01',
         rh: 'pozitiv'
@@ -336,7 +336,7 @@ Meteor.startup(() => {
       }
       ],
       city: 'Bucuresti',
-      status: 'false',
+      status: 'Inactiva',
       code: '1234567890124'
     });
     Alerts.insert({
@@ -345,7 +345,7 @@ Meteor.startup(() => {
       date: new Date(now - 10500 * 3600 * 1000),
       address: 'Stefan cel Mare 102',
       city: 'Bucuresti',
-      status: 'false',
+      status: 'Inactiva',
       bloodTypes: [ {
         bloodType: '01',
         rh: 'pozitiv'

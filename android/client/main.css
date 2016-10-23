@@ -58,6 +58,14 @@ label.error {
   transform: translateY(20vh);
   animation: fromTop 2s;
 }
+.chip.active {
+  background: #f44336;
+  color: #fff;
+}
+.chip.inactive {
+  background: #ccc;
+  color: #393939;
+}
 
 @keyframes fromTop {
   0%   { opacity: 0; transform: translateY(0); }
