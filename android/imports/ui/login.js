@@ -2,6 +2,7 @@ import { Meteor } from 'meteor/meteor';
 import { Template } from 'meteor/templating';
 import './login.html';
 
+
 Template.login.onRendered( function() {
   $( "#loginForm" ).validate();
 });
@@ -15,9 +16,12 @@ Template.login.events({
     };
     Meteor.loginWithPassword(data.emailAddress, data.password, function(Error) {
       if (Error) {
+        Bert.alert( 'Incearca din nou!', 'danger', 'growl-top-right' );
+
         console.log(Error.reason);
       } else {
         // console.log('yuhuu');
+        Bert.alert( 'Te-ai logat!', 'success', 'growl-top-right' );
         FlowRouter.go('/main');
       }
     })

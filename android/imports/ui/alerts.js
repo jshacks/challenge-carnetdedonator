@@ -16,4 +16,11 @@ Template.alerts.helpers({
  alerts() {
    return Alerts.find({});
  },
+ status() {
+  if (Alerts.findOne() === 'active') {
+    return 'active';
+  } else if (Alerts.findOne() === 'false') {
+    return 'inactive';
+  }
+ }
 });

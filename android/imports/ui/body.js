@@ -2,6 +2,7 @@ import { Template } from 'meteor/templating';
 import { ReactiveVar } from 'meteor/reactive-var';
 
 import './body.html';
+import './locations.html';
 import './donations.html';
 import './alerts.html';
 import './register.html';

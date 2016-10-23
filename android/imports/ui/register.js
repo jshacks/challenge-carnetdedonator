@@ -33,6 +33,7 @@ Template.register.events({
      if (error) {
       console.log("Error: " + error.reason);
     } else {
+      Bert.alert( 'Te-ai inregistrat!', 'success', 'growl-top-right' );
       FlowRouter.go('/main');
     }
   });

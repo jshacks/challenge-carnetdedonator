@@ -4,10 +4,12 @@
         <ul>
         {{#each alerts}}
           <li class="card">
-            <div class="card-header">{{name}}</div>
+            <div class="card-header">{{name}} <div class="chip-label {{status}}">{{status}}</div></div>
             <div class="card-content">
                 <div class="card-content-inner">
+                {{status}}
                   <p>{{address}}, {{city}}</p>
+                  <p>Status: {{status}}</p>
                   <p>Grupe de sange necesare:</p>
                   <ul class="groups-list">
                     {{#each bloodTypes}}

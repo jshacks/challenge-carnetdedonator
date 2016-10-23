@@ -11,8 +11,8 @@
     </div>
   </div>
   <div class="toolbar tabbar">
-    <div class="toolbar-inner"><a href="#tab1" class="active tab-link">Istoric vizite</a><a href="#tab2" class="tab-link">Alerte</a>
-    <span class="tab-link-highlight" style="width: 50%; transform: translate3d(0%, 0px, 0px);"></span>
+    <div class="toolbar-inner"><a href="#tab1" class="active tab-link">Istoric vizite</a><a href="#tab2" class="tab-link">Alerte</a><a href="#tab3" class="tab-link">Centre</a>
+    <span class="tab-link-highlight" style="width: 33%; transform: translate3d(0%, 0px, 0px);"></span>
     </div>
   </div>
     <div class="tabs-animated-wrap">
@@ -25,6 +25,10 @@
           {{> alerts}}
         </div>
         <!-- / tab2 -->
+        <div id="tab3" class="page-content tab">
+          {{> locations}}
+        </div>
+        <!-- / tab3 -->
       </div>
       <!-- / tab2 -->
     </div>
